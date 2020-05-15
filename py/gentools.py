@@ -8,20 +8,6 @@ General set of tools which may have shared use between projects
 import sys
 import time
 
-def sum_k(N, k=1):
-    p = (N - 1) // k
-    result = ((k * p * (p + 1)) // 2)
-    return result
-
-def fibonacci(N):
-    result = [1, 2]
-    track = (result[-1] + result[-2])
-    while track < N:
-        result.append(track)
-        track = (result[-1] + result[-2])
-
-    return result
-
 def custominput(valuetype='value'):
     vowels = [valuetype.startswith(x) for x in ['a', 'e', 'i', 'o', 'u']]
     starts_with_vowel = any(vowels)
