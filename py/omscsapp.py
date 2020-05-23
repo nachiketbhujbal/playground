@@ -5,6 +5,18 @@ author: Nachiket Bhujbal
 simple script used to quickly count words and chars in my application for the
 OMSCS program at GaTech.
 '''
+import docx
+
+DOCROOT = '/Users/nachiketbhujbal/OneDrive/Documents/GeorgiaTech/'
+
+def process_docx():
+    docpath = 'goals_and_background_2020.docx'
+    doc = docx.Document(docpath)
+    fulltext = []
+    for para in doc.paragraphs:
+        fulltext.append(para.text)
+
+    return '\n'.join(fulltext)
 
 def background_and_goals():
     essay = (
@@ -32,10 +44,16 @@ def background_and_goals():
     computer science, from software engineering, to algorithmic complexity and
     computational theory. I had greatly sharpened my math and critical thinking
     skills and also become proficient at Python, C++, JavaScript, SQL, and a
-    host of other programming languages. I learned more linear algebra,
-    statistics, and differential equations in that year, than I could have ever
-    absorbed from undergraduate courses, since I would frequently apply concepts
-    as soon as I learned them on huge sets of stochastic market data.
+    host of other programming languages.
+
+    I learned more linear algebra, statistics, and differential equations in
+    that year, than I could have ever absorbed from undergraduate courses, since
+    I would frequently apply concepts as soon as I learned them on huge sets of
+    stochastic market data.
+
+    Among the many skills I developed/honed/mastered during this time, I am most
+    proud of my achievements in statistics, linear algebra, etc. and my ability
+    to become proficient in a variety of coding programs such as C++ etc.
 
     I was hired full time with RBC in 2019, after that yearlong internship. Now
     I work on algorithmic strategy development and am also helping to build
@@ -86,11 +104,12 @@ def count_words(essay):
         print('Number of Unique words: {}'.format(len(set(words))))
 
 def main():
-    print()
-    background_and_goals()
-    print()
-    statement_of_purpose()
-
+    # print()
+    # background_and_goals()
+    # print()
+    # statement_of_purpose()
+    text = process_docx()
+    print(text)
 
 
 if __name__ == '__main__':
