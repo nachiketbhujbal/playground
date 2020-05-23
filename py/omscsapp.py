@@ -41,7 +41,7 @@ def background_and_goals():
     I work on algorithmic strategy development and am also helping to build
     the developer API, which provides a framework for others within the firm to
     offer custom cross-asset strategies for clients. My goals are to drive
-    future technological innovation within RBC, and discover new limits of
+    future technological innovations within RBC and discover new limits of
     computation.
     """
     )
