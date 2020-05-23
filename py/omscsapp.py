@@ -24,7 +24,7 @@ def background_and_goals():
     Markets in NYC, where I worked as a quantitative developer on the central
     risk trading desk. I wrote software to analyze terabytes sets of financial
     markets data, worked on a project to speed up our automated trading
-    algorithms and execute orders more effeciently, and built a full-stack
+    algorithms and execute orders more efficiently, and built a full-stack
     trading platform that is now used by more than 100 traders across the US,
     Canada, and London.
 
