@@ -22,7 +22,7 @@ def background_and_goals():
 
     After graduation, I accepted a full time 1-year internship at RBC Capital
     Markets in NYC, where I worked as a quantitative developer on the central
-    risk trading desk. I wrote software to analyze enormous sets of financial
+    risk trading desk. I wrote software to analyze terabytes sets of financial
     markets data, worked on a project to speed up our automated trading
     algorithms and execute orders more effeciently, and built a full-stack
     trading platform that is now used by more than 100 traders across the US,
@@ -41,7 +41,7 @@ def background_and_goals():
     I work on algorithmic strategy development and am also helping to build
     the developer API, which provides a framework for others within the firm to
     offer custom cross-asset strategies for clients. My goals are to drive
-    future technological innovations within RBC, and discover new limits of
+    future technological innovation within RBC, and discover new limits of
     computation.
     """
     )
