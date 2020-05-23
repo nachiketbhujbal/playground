@@ -6,52 +6,56 @@ simple script used to quickly count words and chars in my application for the
 OMSCS program at GaTech.
 '''
 
-
 def background_and_goals():
     essay = (
     """
-    I graduated with a Bachelor of Science in Engineering Physics from the
-    University of Illinois at Urbana-Champaign. My specialization was in
+    I graduated with a Bachelor of Science in Engineering Physics in 2018 from
+    the University of Illinois at Urbana-Champaign. My specialization was in
     Computational Physics, with a minor in Computer Science. My cumulative GPA
     by graduation was 3.01/4.0.
 
-    During my undergraduate career, I spent time doing research was in a
-    soybean genomics lab. This inspired me to further my education in computer
-    science. However, primarily the financial markets drove much of my
-    curiosity, where my education in physics helped me draw conclusions between
-    the physical and the financial worlds.
+    During my undergraduate career, I worked as a data analyst on a two-man
+    team in a soybean genetics lab on campus. I created a program for analyzing
+    gene sequences taken from real soybene samples and pattern-matched them
+    against a university database. I also wrote a GUI-based application wrapper
+    around this program for my PI and the other RAs in our lab to use easily.
 
-    Now, I spend my days wrangling with complex and large sets of financial
-    data across all types of markets, from stocks and bonds, to complex
-    derivatives like futures and options. Using the language of math to
-    formalize the relationships between these various sets of data, and the
-    tools of physics to break down these problems into fundamental units, I can
-    start putting together the pieces of this enourmous puzzle.
+    After graduation, I accepted a 1-year internship at RBC Capital Markets,
+    where I worked full time as a quant developer on the central risk trading
+    desk. I wrote software to analyze enormous sets of financial markets data
+    and built a full-stack trading platform that is now used across the company
+    by  more than 100 traders in the US, Canada, and London.
 
-    It takes a significant amount of time translating this math, often
-    expressed in continuous forms, to the language of computers (programming
-    languages), which involves discretization and implementing various
-    numerical methods and solutions. These are the types of problems I deal
-    with on a day to day basis. These are fun problems to me.
+    During my internship, I worked on a project to speed up our automated
+    trading algorithms and execute orders more effeciently. By then, I was fully
+    engrossed in all aspects of computer science, from software engineering, to
+    algorithmic complexity and computational theory.
 
-    If the kinds of problems I’ve described above are familiar to you and
-    you’re interested in working together to solve these kinds of problems, or
-    you just want to network and connect, feel free to chat and get in touch!
-    If you're all the way down here, thanks for reading and I hope you enjoyed
-    my summary!
+    By the end of the internship, I had greatly sharpened my math and critical
+    thinking skills. I had also become proficient at Python, C++, JavaScript,
+    SQL, and various other programming languages. I learned more linear algebra,
+    statistics, and differential equations in that year, than I could have ever
+    absorbed from undergraduate courses, since I would frequently apply concepts
+    as soon as I learned them on huge sets of stochastic market data.
+
+    I was hired full time with RBC in 2019, after that year long internship.
+    Now I work on algorithmic strategy development and am also helping to build
+    the developer API, which provides a framework for others within the firm to
+    offer custom cross-asset strategies for their clients.
     """
     )
-    count_words(bggessay)
-    count_chars(bggessay)
+    print('background_and_goals:')
+    count_words(essay)
+    count_chars(essay)
 
 def statement_of_purpose():
     essay = (
     """
-
     """
     )
-    count_words(bggessay)
-    count_chars(bggessay)
+    print('statement_of_purpose:')
+    count_words(essay)
+    count_chars(essay)
 
 def count_chars(essay):
     essay = essay.strip()
@@ -76,7 +80,9 @@ def count_words(essay):
     print('Number of Unique words: {}'.format(len(set(words))))
 
 def main():
+    print()
     background_and_goals()
+    print()
     statement_of_purpose()
 
 
