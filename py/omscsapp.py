@@ -4,13 +4,19 @@ date: 2020-03-05
 author: Nachiket Bhujbal
 simple script used to quickly count words and chars in my application for the
 OMSCS program at GaTech.
+
+requirements:
+lxml==4.5.1
+Pillow==7.1.2
+python-docx==0.8.10
+
+pip install -U python-docx
 '''
 import docx
 
 DOCROOT = '/Users/nachiketbhujbal/OneDrive/Documents/GeorgiaTech/'
 
-def process_docx():
-    docpath = DOCROOT + 'goals_and_background_2020.docx'
+def process_docx(docpath):
     doc = docx.Document(docpath)
     fulltext = []
     for para in doc.paragraphs:
@@ -18,11 +24,16 @@ def process_docx():
 
     return '\n'.join(fulltext)
 
-def background_and_goals():
-    print('background_and_goals:')
+def goals_and_background():
+    print('goals_and_background:')
+    docpath = DOCROOT + 'goals_and_background_2020.docx'
+    text = process_docx(docpath)
+    count_words(text)
+    count_chars(text)
 
 def statement_of_purpose():
     print('statement_of_purpose:')
+    docpath = DOCROOT + 'statement_of_purpose_2020.docx'
 
 def count_chars(essay):
     essay = essay.strip()
@@ -49,9 +60,7 @@ def count_words(essay):
         print('Number of Unique words: {}'.format(len(set(words))))
 
 def main():
-    text = process_docx()
-    print(text)
-
+    goals_and_background()
 
 if __name__ == '__main__':
     main()
