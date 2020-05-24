@@ -22,18 +22,9 @@ def process_docx(docpath):
     for para in doc.paragraphs:
         fulltext.append(para.text)
 
-    return '\n'.join(fulltext)
-
-def goals_and_background():
-    print('goals_and_background:')
-    docpath = DOCROOT + 'goals_and_background_2020.docx'
-    text = process_docx(docpath)
-    count_words(text)
-    count_chars(text)
-
-def statement_of_purpose():
-    print('statement_of_purpose:')
-    docpath = DOCROOT + 'statement_of_purpose_2020.docx'
+    fulltext = '\n'.join(fulltext)
+    count_words(fulltext)
+    count_chars(fulltext)
 
 def count_chars(essay):
     essay = essay.strip()
@@ -60,7 +51,12 @@ def count_words(essay):
         print('Number of Unique words: {}'.format(len(set(words))))
 
 def main():
-    goals_and_background()
+    print('\ngoals_and_background:')
+    docpath = DOCROOT + 'goals_and_background_2020.docx'
+    text = process_docx(docpath)
+    print('\nstatement_of_purpose:')
+    docpath = DOCROOT + 'statement_of_purpose_2020.docx'
+    text = process_docx(docpath)
 
 if __name__ == '__main__':
     main()
