@@ -54,6 +54,7 @@ def main():
     print('\ngoals_and_background:')
     docpath = DOCROOT + 'goals_and_background_2020.docx'
     text = process_docx(docpath)
+
     print('\nstatement_of_purpose:')
     docpath = DOCROOT + 'statement_of_purpose_2020.docx'
     text = process_docx(docpath)
