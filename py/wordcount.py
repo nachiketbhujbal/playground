@@ -25,6 +25,20 @@ def process_docx(docpath):
     fulltext = '\n'.join(fulltext)
     count_words(fulltext)
     count_chars(fulltext)
+    count_sents(doc)
+
+def count_sents(doc):
+    paradict = {}
+    paranum = 0
+    for para in doc.paragraphs:
+        if para.text != '':
+            paranum += 1
+            paradict['Para #{}'.format(paranum)] = para.text.split('. ')
+
+    print('Sentences per paragraph:')
+    for key, val in paradict.items():
+        print('{}: {}'.format(key, len(val)))
+        # print(val)
 
 def count_chars(essay):
     essay = essay.strip()
@@ -57,7 +71,7 @@ def main():
 
     print('\nstatement_of_purpose:')
     docpath = DOCROOT + 'statement_of_purpose_2020.docx'
-    text = process_docx(docpath)
+    # text = process_docx(docpath)
 
 if __name__ == '__main__':
     main()
